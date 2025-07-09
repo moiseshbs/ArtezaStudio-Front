@@ -1,0 +1,392 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --card_width: 270px;
+    --row_increment: 10px;
+    --card_border_radius: 16px;
+    --card_small: 26;
+    --card_medium: 33;
+    --card_large: 40;
+}
+
+.like, .deslike {
+    cursor: pointer;
+}
+
+.gambiarra {
+    height: 15vh;
+}
+
+.areaCards {
+    height: fit-content;
+    min-height: 55vh;
+    width: 100%;
+}
+
+.pin_container {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--card_width));
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
+}
+
+.pin_container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.card {
+    padding: 0;
+    margin: 15px 10px;
+    border-radius: var(--card_border_radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.150);
+    cursor: pointer;
+}
+
+.card .click {
+    height: 100%;
+    width: 100%;
+}
+
+.card_small {
+    grid-row-end: span var(--card_small);
+}
+
+.card_medium {
+    grid-row-end: span var(--card_medium);
+}
+
+.card_large {
+    grid-row-end: span var(--card_large);
+}
+
+.info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    transform: translateY(5%);
+    transition: transform 0.3s ease;
+    opacity: 0;
+    border-radius: 0px 0px 16px 16px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+    background: linear-gradient(#f1e2d500, #0000009f);
+}
+
+.info a {
+    color: #fff;
+}
+
+.card:hover .info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.infoUser {
+    display: flex;
+    gap: 15px;
+}
+
+.areaFotoPerfil {
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+}
+
+.options {
+    font-size: 1rem;
+    display: flex;
+    gap: 25px;
+}
+
+.semPubli {
+    width: 80vw;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.semPubli i {
+    font-size: 4rem;
+}
+
+.dash {
+    background: none;
+}
+
+.dash a {
+    color: #FFF;
+}
+
+.dash .opcaoDrop p {
+    color: #000;
+}
+
+.dash .opcaoDrop i {
+    color: #000;
+}
+
+header {
+    width: 100%;
+    height: 13vh;
+    transition: background-color 0.3s;
+    position: fixed;
+    z-index: 2;
+    background: linear-gradient(#f1e2d5, #f1e2d500);
+}
+
+.header-scroll {
+    background: linear-gradient(#f1e2d5, #f1e2d500);
+    color: #000000;
+}
+
+
+header .container {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#dropDownPerfil {
+    background-color: #fff;
+    height: fit-content;
+    width: 120px;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    bottom: -16vh;
+    padding: 10px 0;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.150);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+#dropDownPerfil .opcaoDrop {
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+}
+
+#dropDownPerfil .opcaoDrop div {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+#dropDownPerfil .opcaoDrop:hover {
+    background-color: #f1e2d5;
+}
+
+header .container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container .criar a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+header .container i {
+    font-size: 1.3rem;
+}
+
+header .container input {
+    height: 50px;
+    width: 400px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    padding-left: 5px;
+    border-left: 2px solid #000;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    border-bottom: 5px solid #000;
+    
+}
+
+header .container .perfil {
+    gap: 25px;
+}
+
+header .container .fotoPerfil {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.barra {
+    position: absolute;
+    z-index: 10;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #FFF;
+
+} 
+
+.barra p {
+    border-bottom: 1px solid #0000006b;
+}
+
+header .container .nav {
+    gap: 50px;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 60%;
+}
+
+header a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+footer {
+    height: 32vh;
+    width: 100%;
+    background-color: #211F22;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+footer .areaNav {
+    height: 60%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+}
+
+footer .areaInfos {
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    line-height: 1.6;
+    background-color: #F1E2D5;
+    position: relative;
+}
+
+#div_alerta {
+    position: fixed;
+    width: fit-content;
+    height: 60px;
+    background-color: #fff;
+    bottom: 15px;
+    right: 15px;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.150);
+    display: none;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    gap: 25px;
+    color: #fff;
+}
+
+#div_alerta i {
+    font-size: 2rem;
+}
+
+input {
+    width: 98%;
+    height: 50px;
+    border-radius: 10px;
+    border: solid 1px #00000060;
+    margin-top: 5px;
+    padding-left: 5px;
+    font-size: 0.9rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+textarea {
+    width: 97%;
+    height: 100px;
+    border-radius: 10px;
+    border: solid 1px #00000060;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 0.9rem;
+    resize: none;
+}
+
+button {
+        width: 450px;
+        height: 50px;
+        background-color: #5E4889;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.4rem;
+        border-radius: 25px;
+        border-top: solid 1px #000;
+        border-bottom: solid 4px #000;
+        border-right: solid 4px #000;
+        border-left: solid 1px #000;
+        cursor: pointer;
+}
