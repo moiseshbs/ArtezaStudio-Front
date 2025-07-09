@@ -1,0 +1,625 @@
+.container {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+
+.divLike {
+    cursor: pointer;
+}
+
+html, body {
+    overflow-x: hidden;
+    transform: translateX(0);
+}
+
+.areaPublicacoes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#div_arteAmpliada {
+    position: absolute;
+    background-color: #000000be;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#div_arteAmpliada img {
+    height: 90%;
+    max-width: 90%;
+    object-fit: contain;
+    cursor: zoom-out;
+}
+
+.areaPublicacoes .container {
+    display: contents;
+}
+
+.areaPublicacoes .areaCard {
+    height: fit-content;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.areaPublicacoes .areaImagem {
+    height: 300px;
+    width: 350px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.areaPublicacoes .infosCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    height: 40px;
+}
+
+.infosCard .areaNumPublicacao {
+    display: flex;
+    gap: 20px;
+}
+
+.areaPublicacoes .areaFotoPerfil {
+    height: 30px;
+    width: 30px;
+    background-color: #5E4889;
+    border-radius: 100%;
+}
+
+.infosCard .ladoEsq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.imgPublicacao {
+    height: 100%;
+    width: fit-content;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.150);
+}
+
+.fotoPerfil {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.curtida {
+    color: red;
+}
+
+.areaFeed {
+    background-color: aquamarine;
+    height: 100px;
+}
+
+
+.areaExplorar {
+    height: 95vh;
+    width: 100%;
+    /* background-image: url(../assets/componentes/grid.png); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#F1E2D580, #f1e2d5);
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.areaExplorar .imgHome {
+    height: 400px;
+}
+
+.areaExplorar .imgBtn {
+    height: 70px;
+    width: 350px;
+    object-fit: contain;
+}
+
+.areaBeneficios {
+    height: 85vh;
+    margin-bottom: 50px;
+}
+
+.areaBeneficios .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card {
+    height: 150px;
+    width: 100%;
+    background-color: #fff;
+    border-left: 2px solid #000;
+    border-top: 2px solid #000;
+    border-right: 5px solid #000;
+    border-bottom: 5px solid #000;
+    border-radius: 20px;
+    display: flex;   
+    align-items: center;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.150);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.card p {
+    margin: 0 15px;
+}
+
+.card .esq {
+    width: 40%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    border-right: solid 1px #0000009a
+}
+
+.card .esq h1 {
+    font-size: 2rem;
+    width: 50%;
+}
+
+.card .esq .iconCard {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+}
+
+.card .dir {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.dir p{
+    margin: 0 20px;
+}
+
+.areaSobre {
+    height: 90vh;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.areaSobre .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.areaSobre .areaCardSobre {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.areaSobre .card {
+    height: 250px;
+    width: 73%;
+    border-radius: 0;
+}
+
+.areaSobre .cardFoto {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardFoto img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+}
+
+.areaCardFoto {
+    height: 250px;
+    width: 250px;
+}
+
+.areaCardFoto .iconsRede {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 30%;
+    font-size: 2.5rem;
+}
+
+.areaCardFoto .cardFoto {
+    height: 70%;
+}
+
+/* VER MAIS */
+.areaBtnVerMais {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.areaBtnVerMais button {
+    height: 70px;
+    width: 300px;
+    border-radius: 50px;
+    color: #F2C94E;
+}
+
+.areaScrollCategorias {
+    height: 250px;
+    width: 100%;
+    background-color: #F2C94E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+}
+
+.areaScrollCategorias .card {
+    width: 230px;
+    height: 180px;
+    background-color: #7b7b7b;
+    margin-bottom: 10px;
+}
+
+/* PUBLICAÇÃO */
+.gambiarra {
+    height: 15vh;
+}
+.areaPublicacao {
+    height: 85vh;
+}
+
+#id_imgPublicacao img {
+    cursor: zoom-in;
+}
+
+.areaPublicacao .container {
+    width: 95%;
+    height: 95%;
+    display: flex;
+}
+
+.areaTituloPubli {
+    height: 100%;
+    width: 70%;
+}
+
+.cabecalhoPublicacao {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 15%;
+}
+
+.cabecalhoPublicacao i {
+    font-size: 2rem;
+    margin-right: 15px;
+}
+
+.cabecalhoPublicacao a {
+    cursor: pointer;
+}
+
+.areaImgPublicacao {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.areaImgPublicacao img {
+    height: 95%;
+    max-width: 98%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.areaInfoComentarios {
+    width: 30%;
+    height: 100%;
+    border-left: 1px solid #0000005b;
+}
+
+.areaComentario {
+    height: 60%;
+    width: 100%;
+}
+
+.inputComentario {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.inputComentario input {
+    width: 70%;
+    margin-left: 10px;
+}
+
+.inputComentario button {
+    width: 30%;
+    font-size: 18px;
+}
+
+.areaInfoComentarios .areaInfo {
+    height: 40%;
+}
+
+.areaInfoComentarios .areaInfo .infosUser{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nomeFoto {
+    display: flex;
+    gap: 10px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.areaTresPontos {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.cardOption {
+    position: absolute;
+    min-height: 100px;
+    max-height: fit-content;
+    min-width: 150px;
+    max-width: fit-content;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.150);
+    top: 20px;
+    right: 0;
+    display: none;
+    flex-direction: column;
+}
+
+.cardOption .option {
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    border-radius: 10px 10px 0px 0px ;
+}
+
+.optionBaixo {
+    border: none !important;
+    color: red;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.optionEditar {
+    height: 50%;
+    width: 300px;
+    padding: 10px;
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    border-radius: 10px 10px 0px 0px ;
+}
+
+.opcaoExcluir {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option input {
+    width: 100%;
+    margin: 20px;
+}
+
+.option .descricao {
+    height: 100px;
+    margin: 20px;
+}
+
+.cardOption .btnSalvar {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.infosUser .fotoPerfil {
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#id_imgPerfil {
+    display: flex;
+}
+
+#user_nome {
+    cursor: pointer;
+}
+
+.areaInfoComentarios .areaInfo .areaDescricao{
+    height: 45%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.areaDescricao p, .areaDescricao span {
+    margin: 0 10px;
+}
+
+.areaDescricao span {
+    color: #7b7b7b;
+    align-self: flex-end;
+}
+
+.areaInfoComentarios .areaInfo .areaOpcoes {
+    height: 30%;
+    width: 100%;
+    border-top: 1px solid #0000005b;
+    border-bottom: 1px solid #0000005b;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.comentario {
+    height: fit-content;
+    width: 95%;
+    margin: auto;
+    border-bottom: solid 1px #0000005b;
+    display: flex;
+    padding: 15px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.comentario .dtComentario {
+    color: #7b7b7b;
+    font-size: 0.9rem;
+}
+
+.comentario .headerComentario {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comentario .areaFotoPerfil {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.comentarioResposta {
+    width: 80% !important;
+    display: none;
+}
+
+.comentarioResposta .fotoPerfil {
+    height: 30px !important;
+    width: 30px !important;
+}
+
+.areaFotoPerfil .fotoPerfilPubli {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.imgSobre {
+    border-radius: 0 !important;
+}
+
+.areaFotoPerfil .fotoPerfil {
+    height: 40px;
+    width: 40px;
+    background-color: #5E4889;
+}
+
+
+.comentario .contComentario {
+    height: 100%;
+    width: 80%;
+}
+
+.contComentario h4 {
+    cursor: pointer;
+}
+
+.contComentario h4, span {
+    margin-left: 5px;
+}
+
+.scrollComentarios {
+    overflow-y: auto;
+    height: 250px;
+}
+
+.btnMostrarMais {
+    font-weight: bold;
+    color: #5E4889;
+    cursor: pointer;
+}
+
+.btnMostrarMais:hover {
+    color: #6f49bb;
+}

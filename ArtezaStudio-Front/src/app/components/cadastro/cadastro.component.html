@@ -1,0 +1,46 @@
+<section>
+    <div class="areaImagem cadastro">
+        <a href="index.html">
+            <img src="../assets/componentes/logo.png" style="max-height: 100%; width: 150px; margin: 25px;"
+                alt="Arteza logo">
+        </a>
+    </div>
+    <div class="areaForm">
+        <form class="formulario" (ngSubmit)="cadastrar()">
+            <h1>Junte-se ao Arteza!</h1>
+
+            <div class="doisInputs">
+                <div>
+                    <p>Nome</p>
+                    <input type="text" [(ngModel)]="usuario.nome" name="nome">
+                </div>
+
+                <div>
+                    <p>Username</p>
+                    <input type="text" [(ngModel)]="usuario.username" name="username">
+                </div>
+            </div>
+
+            <div>
+                <p>Email</p>
+                <input type="email" [(ngModel)]="usuario.email" name="email">
+            </div>
+
+            <div style="position: relative;">
+                <p>Senha</p>
+                <input type="password" [(ngModel)]="usuario.senha" name="senha">
+                <div id="cardSenha">
+                    <span id="span_maiuscula">Letras maiúsculas (A-Z)</span>
+                    <span id="span_minuscula">Letras minúsculas (a-z)</span>
+                    <span id="span_numero">Números (0-9)</span>
+                    <span id="span_especial">Caracteres especiais (!, &#64;, #, etc.)</span>
+                    <span id="span_tamanho">Pelo menos 8 caracteres</span>
+                </div>
+            </div>
+
+            <button type="submit">Criar conta</button>
+
+            <span>Já possui uma conta? <a href="login.html"><b>Entrar</b></a></span>
+        </form>
+    </div>
+</section>
